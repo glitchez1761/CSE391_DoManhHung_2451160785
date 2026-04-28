@@ -1,1 +1,4 @@
-# CSE391_DoManhHung_2451160785
+# CSE391_DoManhHung_2451160785  
+Tên: Đỗ Mạnh Hùng  
+MSV: 2451160785  
+Lớp: 66HTTT2
