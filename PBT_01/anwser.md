@@ -72,8 +72,10 @@ Câu B4:
   + `<footer id="main-footer" class="sc-4ce82f3c-0 dVnCth">`: Nằm ở dưới cùng của trang, dùng để chứa các thông tin như bản quyền, chính sách, danh mục và các liên kết phụ trợ.
 ![alt text](screenshots/b4-1.3.png)
 - 2 thẻ không dùng đúng semantic:
-  + `<div id="widget-chat"...>`: Đây là khối chat hiển thị nổi ở góc màn hình (nội dung phụ trợ). Theo chuẩn Semantic HTML5, khối này nên được bọc bằng thẻ `<aside>` thay vì dùng `<div>` vô danh.
-![alt text](screenshots/b4-1.4.png) 
+  + `<div id="widget-chat"...>`: Đây là khối chat hiển thị nổi ở góc màn hình (nội dung phụ trợ).
+![alt text](screenshots/b4-1.4.png)
+  + Các khối liên kết điều hướng trong `<footer>` đang sử dụng thẻ `<div>` để bọc các nhóm như "Về Tiki", "Hỗ trợ khách hàng", "Hợp tác và liên kết".
+![alt text](screenshots/b4-1.5.png)
 2. 
 - Table này hiển thị nội dung so sánh giữa sản phẩm hiện tại và sản phẩm khác tương tự được gợi ý bỏi trợ lý AI của web.
 - Table này có sử dụng `<thead>`, `<tbody>`.
