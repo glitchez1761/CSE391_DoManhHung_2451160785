@@ -1,0 +1,58 @@
+/* Box model reset */
+* {
+    box-sizing: border-box;
+}
+
+/* Element Selector */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ID Selector & Descendant Selector */
+#header {
+    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    padding: 20px;
+}
+
+/* Class Selector & Pseudo-class */
+.nav-link {
+    text-decoration: none;
+    color: #00f2fe;
+}
+.nav-link:hover {
+    color: #007bb5;
+    text-decoration: underline;
+}
+.nav-link.active {
+    font-weight: bold;
+    color: #005f8c;
+}
+
+/* Table styling with advanced selectors */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+tr:nth-child(even) {
+    background-color: #e0e0e0;
+}
+tr:hover {
+    background-color: #cce7ff;
+}
+
+/* Footer styling */
+footer {
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 15px;
+}
