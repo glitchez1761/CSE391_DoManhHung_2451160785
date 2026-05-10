@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model Lab</title>
+    <link rel="stylesheet" href="boxmodel.css">
+</head>
+<body>
+
+    <h1 style="text-align: center;">Bài B2: CSS Box Model Lab</h1>
+
+    <section>
+        <h2>Phần 1: So sánh content-box và border-box</h2>
+        <p>Cả hai hộp đều có <code>width: 300px</code>, <code>padding: 20px</code> và <code>border: 5px solid</code>.</p>
+        
+        <div class="box content-box">
+            <strong>Hộp 1: content-box</strong><br>
+            Kích thước tổng bị phình to ra thêm.
+        </div>
+
+        <div class="box border-box">
+            <strong>Hộp 2: border-box</strong><br>
+            Kích thước tổng được giữ đúng 300px.
+        </div>
+    </section>
+
+    <hr style="margin: 40px 0;">
+
+    <section>
+        <h2>Phần 2: Layout 3 cột (Container 1000px)</h2>
+
+        <h3 class="broken-title">Trường hợp 1: KHÔNG dùng border-box (Layout bị vỡ)</h3>
+        <p class="desc">
+            Tổng width = (250 + 30) + (500 + 40) + (250 + 30) = <strong>1100px</strong> > 1000px. <br>
+            Do vượt quá kích thước container (khung đứt nét màu đỏ), cột thứ 3 bị đẩy xuống dòng.
+        </p>
+        
+        <div class="container layout-broken">
+            <div class="sidebar-left">
+                <strong>sidebar</strong><br>Width: 250px<br>Padding: 15px
+            </div>
+            <div class="content-middle">
+                <strong>content</strong><br>Width: 500px<br>Padding: 20px
+            </div>
+            <div class="sidebar-right">
+                <strong>ads</strong><br>Width: 250px<br>Padding: 15px
+            </div>
+        </div>
+
+        <h3 class="fixed-title">Trường hợp 2: CÓ dùng border-box (Layout chuẩn)</h3>
+        <p class="desc">
+            Tổng width = 250 + 500 + 250 = <strong>1000px</strong>. <br>
+            Padding được tính gộp vào bên trong Width, 3 cột nằm ngang vừa khít.
+        </p>
+
+        <div class="container layout-fixed">
+            <div class="sidebar-left">
+                <strong>sidebar</strong><br>Width: 250px<br>Padding: 15px
+            </div>
+            <div class="content-middle">
+                <strong>content</strong><br>Width: 500px<br>Padding: 20px
+            </div>
+            <div class="sidebar-right">
+                <strong>ads</strong><br>Width: 250px<br>Padding: 15px
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

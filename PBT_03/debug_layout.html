@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug CSS Layout - Câu C1</title>
+    <link rel="stylesheet" href="debug_layout.css">
+</head>
+<body>
+
+    <h1 style="text-align: center;">Câu C1: Debug CSS Layout</h1>
+
+    <h2 style="text-align: center; color: green;">Cách 1: Sửa bằng border-box</h2>
+    <p style="text-align: center;">Giữ nguyên width khai báo, thêm box-sizing: border-box để ép kích thước.</p>
+    
+    <div class="container clearfix">
+        <div class="sidebar fix-border-box">
+            <strong>Sidebar</strong><br>
+            width: 300px<br>
+            (border-box)
+        </div>
+        <div class="content fix-border-box">
+            <strong>Content</strong><br>
+            width: 660px<br>
+            (border-box)
+        </div>
+    </div>
+
+
+    <h2 style="text-align: center; color: blue; margin-top: 50px;">Cách 2: Sửa bằng cách trừ hao width (Không dùng border-box)</h2>
+    <p style="text-align: center;">Giữ nguyên content-box mặc định, giảm giá trị width đi lượng padding và border tương ứng.</p>
+
+    <div class="container clearfix">
+        <div class="sidebar fix-width-sidebar">
+            <strong>Sidebar</strong><br>
+            width: 258px<br>
+            (content-box)
+        </div>
+        <div class="content fix-width-content">
+            <strong>Content</strong><br>
+            width: 598px<br>
+            (content-box)
+        </div>
+    </div>
+
+</body>
+</html>
