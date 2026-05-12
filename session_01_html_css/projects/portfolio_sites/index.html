@@ -8,8 +8,14 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
+
     <header>
         <div class="logo">Hùng Đỗ</div>
         <input type="checkbox" id="menu-toggle" class="menu-toggle">
@@ -28,98 +34,117 @@
             <p>Information Systems Student | Developer | Problem Solver</p>
             <a href="#portfolio" class="cta-button">View My Work</a>
         </section>
+
         <section id="about" class="about-section">
-            <div class="container about-grid">
-                <div class="about-image"><img src="https://via.placeholder.com/400x400" alt="Đỗ Mạnh Hùng" style="width:100%; max-width:300px; border-radius:50%;"></div>
-                <div class="about-content">
-                    <h2>About Me</h2>
-                    <p class="lead">I'm a passionate Information Systems student at Thủy Lợi University.</p>
-                    <p>I specialize in building logical structures and have a strong foundation in algorithms. I enjoy working with C++, Python, HTML, and CSS to build effective solutions.</p>
+            <div class="container">
+                <div class="about-flex">
+                    <div class="about-image">
+                        <img src="https://via.placeholder.com/400x400" alt="Đỗ Mạnh Hùng">
+                    </div>
+                    <div class="about-content">
+                        <h2>About Me</h2>
+                        <p class="lead">I'm a passionate Information Systems student at Thủy Lợi University.</p>
+                        <p>I specialize in building logical structures and have a strong foundation in algorithms. I enjoy working with C++, Python, and web technologies.</p>
+                    </div>
                 </div>
             </div>
         </section>
+
         <section id="skills" class="skills-section">
             <div class="container">
                 <h2>My Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-item"><span class="skill-name">C++ / Algorithms</span><div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div></div>
-                    <div class="skill-item"><span class="skill-name">Python</span><div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div></div>
-                    <div class="skill-item"><span class="skill-name">HTML5 & CSS3</span><div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div></div>
+                <div class="skills-flex">
+                    <div class="skill-item">
+                        <div style="display: flex; justify-content: space-between;">
+                            <span class="skill-name">C++ / Algorithms</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div style="display: flex; justify-content: space-between;">
+                            <span class="skill-name">Python</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div style="display: flex; justify-content: space-between;">
+                            <span class="skill-name">HTML5 & CSS3</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div style="display: flex; justify-content: space-between;">
+                            <span class="skill-name">SQL Server</span>
+                            <span>50%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 50%"></div></div>
+                    </div>
                 </div>
             </div>
         </section>
+
         <section id="portfolio" class="portfolio-section">
             <div class="container">
                 <h2>My Portfolio</h2>
-                <div class="portfolio-filters" style="text-align:center; margin-bottom:2rem;">
-                    <button class="filter-btn">All</button> <button class="filter-btn">Software</button>
+                <div class="portfolio-filters">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Software</button>
+                    <button class="filter-btn">Web</button>
                 </div>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item"><a href="#lightbox-1">
+                <div class="portfolio-flex">
+                    <div class="portfolio-item">
                         <img src="https://via.placeholder.com/400x300?text=CampusSwap" alt="Project 1">
                         <div class="portfolio-overlay"><h3>CampusSwap App</h3></div>
-                    </a></div>
                     </div>
-            </div>
-        </section>
-        </main>
-
-        <div class="portfolio-grid">
-            <div class="portfolio-item"><a href="#lightbox-1">
-                <img src="https://via.placeholder.com/400x300?text=CampusSwap" alt="Project 1">
-                <div class="portfolio-overlay"><h3>CampusSwap App</h3><p>UI Design</p></div>
-            </a></div>
-            <div class="portfolio-item"><a href="#lightbox-2">
-                <img src="https://via.placeholder.com/400x300?text=Dorm+Manager" alt="Project 2">
-                <div class="portfolio-overlay"><h3>Dormitory Management</h3><p>C++ pointer-based 'Hocvien' system</p></div>
-            </a></div>
-            <div class="portfolio-item"><a href="#lightbox-3">
-                <img src="https://via.placeholder.com/400x300?text=Cache+Simulation" alt="Project 3">
-                <div class="portfolio-overlay"><h3>Cache Simulation</h3><p>24.307% hit rate optimization</p></div>
-            </a></div>
-            <div class="portfolio-item"><a href="#lightbox-4">
-                <img src="https://via.placeholder.com/400x300?text=AI+Search" alt="Project 4">
-                <div class="portfolio-overlay"><h3>AI Search Algorithms</h3><p>Python</p></div>
-            </a></div>
-            <div class="portfolio-item"><a href="#lightbox-5">
-                <img src="https://via.placeholder.com/400x300?text=Math+Models" alt="Project 5">
-                <div class="portfolio-overlay"><h3>Math Models</h3><p>Calculus / Probability</p></div>
-            </a></div>
-            <div class="portfolio-item"><a href="#lightbox-6">
-                <img src="https://via.placeholder.com/400x300?text=Digital+Art" alt="Project 6">
-                <div class="portfolio-overlay"><h3>Digital Illustrations</h3><p>Web Gallery</p></div>
-            </a></div>
-        </div>
-        <section id="contact" class="contact-section">
-            <div class="container contact-wrapper" style="display:flex; flex-wrap:wrap; gap:4rem;">
-                <div class="contact-info" style="flex:1; min-width:250px;">
-                    <h3>Contact Information</h3>
-                    <p>📧 your.email@example.com</p> <p>📍 Hanoi, Vietnam</p>
+                    <div class="portfolio-item">
+                        <img src="https://via.placeholder.com/400x300?text=Dorm+Manager" alt="Project 2">
+                        <div class="portfolio-overlay"><h3>Dormitory Management</h3></div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://via.placeholder.com/400x300?text=Cache+Simulation" alt="Project 3">
+                        <div class="portfolio-overlay"><h3>Cache Simulation</h3></div>
+                    </div>
                 </div>
-                <form class="contact-form" style="flex:1.5; min-width:300px;">
-                    <div class="form-group"><label>Name</label><input type="text" required></div>
-                    <div class="form-group"><label>Email</label><input type="email" required></div>
-                    
-                    <div class="form-group">
-                        <label>Message</label>
-                        <textarea placeholder="Tell me about your project" rows="5" required></textarea>
-                    </div>
-
-                    <button type="submit" class="cta-button">Send Message</button>
-                </form>
             </div>
         </section>
 
-<footer class="footer">
-        <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap: 1.5rem;">
-            <div class="footer-logo">Hùng Đỗ</div>
-            <p class="footer-tagline" style="color: #cbd5e1;">Building digital experiences</p>
-            <div class="social-links">
-                <a href="#" class="social-icon">in</a>
-                <a href="#" class="social-icon">GH</a>
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <div class="contact-flex">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <p>Feel free to reach out for collaboration.</p>
+                        <p>📧 your.email@example.com</p>
+                        <p>📍 Hanoi, Vietnam</p>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" required>
+                        </div>
+                        <button type="submit" class="cta-button">Send</button>
+                    </form>
+                </div>
             </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-flex">
+            <div class="footer-logo">Hùng Đỗ</div>
+            <p class="footer-tagline">Building digital experiences</p>
             <p>&copy; 2026 All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
