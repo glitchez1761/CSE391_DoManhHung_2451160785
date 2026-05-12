@@ -1,15 +1,15 @@
-.about-grid { 
-    display: flex; 
-    align-items: center; 
-    gap: 3rem; 
+.about-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
     flex-wrap: wrap; 
 }
-.about-image { 
-    flex: 1; 
-    min-width: 250px; 
-    text-align: center; 
-}
-.about-content { 
-    flex: 1.5; 
-    min-width: 300px; 
+
+.about-image { flex: 1; min-width: 300px; text-align: center; }
+.about-image img { width: 100%; max-width: 350px; border-radius: 50%; }
+.about-content { flex: 1.5; min-width: 300px; }
+
+@media screen and (max-width: 768px) {
+    .about-image, .about-content { width: 100%; }
 }

@@ -1,36 +1,29 @@
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #334155;
+    background-color: var(--color-light);
+    line-height: 1.6;
 }
-body { 
-    font-family: 'Segoe UI', sans-serif; 
-    color: #334155; 
-    background-color: var(--color-light); 
-    line-height: 1.6; 
+
+.container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 4rem 0; }
+
+h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: var(--color-dark); }
+
+.cta-button {
+    background: var(--color-primary);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
 }
-.container { 
-    width: 90%; 
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 4rem 0; 
-}
-h2 { 
-    text-align: center; 
-    font-size: 2.5rem; 
-    margin-bottom: 3rem; 
-    color: var(--color-dark); 
-}
-.cta-button { 
-    background: var(--color-primary); 
-    color: white; 
-    padding: 1rem 2rem; 
-    border-radius: 25px; 
-    text-decoration: none; 
-    display: inline-block; 
-    transition: 0.3s; 
-}
-.cta-button:hover { 
-    transform: scale(1.05); 
-    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4); 
+
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
 }
