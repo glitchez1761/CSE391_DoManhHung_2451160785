@@ -1,0 +1,15 @@
+.about-grid { 
+    display: flex; 
+    align-items: center; 
+    gap: 3rem; 
+    flex-wrap: wrap; 
+}
+.about-image { 
+    flex: 1; 
+    min-width: 250px; 
+    text-align: center; 
+}
+.about-content { 
+    flex: 1.5; 
+    min-width: 300px; 
+}
