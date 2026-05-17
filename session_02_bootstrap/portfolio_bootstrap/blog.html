@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Đỗ Mạnh Hùng</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8fafc; }
+        /* Sticky Sidebar Specs */
+        .sticky-top-sidebar { position: sticky; top: 100px; z-index: 1; }
+        /* Card Styling Specs */
+        .card { border: none; box-shadow: 0 2px 15px rgba(0,0,0,0.08); border-radius: 12px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">Hùng Đỗ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold text-primary" href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="blog" class="py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                
+                <div class="col-lg-8">
+                    <article class="card mb-4 overflow-hidden">
+                        <img src="https://via.placeholder.com/800x400?text=AI+Search+Algorithms" class="card-img-top" alt="AI">
+                        <div class="card-body p-4">
+                            <span class="badge bg-primary">Artificial Intelligence</span>
+                            <h3 class="card-title mt-2 fw-bold">Understanding AI Search Algorithms</h3>
+                            <p class="card-text text-muted"><small>By Đỗ Mạnh Hùng • May 17, 2026 • 5 min read</small></p>
+                            <p class="card-text">A deep dive into A*, Hill Climbing, Beam Search, Branch and Bound, and Alpha-Beta Pruning.</p>
+                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                    </article>
+                    <article class="card mb-4 overflow-hidden">
+                        <img src="https://via.placeholder.com/800x400?text=Kali+Linux" class="card-img-top" alt="Linux">
+                        <div class="card-body p-4">
+                            <span class="badge bg-success">Systems</span>
+                            <h3 class="card-title mt-2 fw-bold">Kali Linux Minimal Setup Guide</h3>
+                            <p class="card-text text-muted"><small>By Đỗ Mạnh Hùng • Mar 22, 2026 • 7 min read</small></p>
+                            <p class="card-text">Troubleshooting Wi-Fi driver installation and display issues on Lenovo ThinkPad T440s.</p>
+                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                    </article>
+                    <article class="card mb-4 overflow-hidden">
+                        <img src="https://via.placeholder.com/800x400?text=C%2B%2B+Pointers" class="card-img-top" alt="C++">
+                        <div class="card-body p-4">
+                            <span class="badge bg-warning text-dark">Programming</span>
+                            <h3 class="card-title mt-2 fw-bold">Mastering Pointers in C++</h3>
+                            <p class="card-text text-muted"><small>By Đỗ Mạnh Hùng • Jan 10, 2026 • 6 min read</small></p>
+                            <p class="card-text">Using pointer-based structures for object management to align with university coding conventions.</p>
+                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                    </article>
+                </div>
+
+                </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
