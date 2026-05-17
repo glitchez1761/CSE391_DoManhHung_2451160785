@@ -12,6 +12,30 @@
         .sticky-top-sidebar { position: sticky; top: 100px; z-index: 1; }
         /* Card Styling Specs */
         .card { border: none; box-shadow: 0 2px 15px rgba(0,0,0,0.08); border-radius: 12px; }
+        /* Comment Section Styles */
+        .comment img.rounded-circle {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+        }
+        .comment.reply img.rounded-circle {
+            width: 40px;
+            height: 40px;
+        }
+        .comment.reply {
+            border-left: 3px solid #e2e8f0;
+            padding-left: 1rem;
+        }
+        .comment.reply.ms-5 {
+            margin-left: 3rem;
+        }
+        .btn-link {
+            color: #0d6efd;
+            text-decoration: none;
+        }
+        .btn-link:hover {
+            color: #0a58ca;
+        }
     </style>
 </head>
 <body>
@@ -77,7 +101,7 @@
 
                                 <div class="comment mb-4">
                                     <div class="d-flex">
-                                        <img src="https://via.placeholder.com/50" class="rounded-circle me-3" alt="Avatar">
+                                        <img src="https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-6/484050951_954842663449216_2872401633711429694_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeFZ-WaVMq2d4CnmFR3N5eOjLM_a2DSH_3gsz9rYNIf_ePGe6o8Sq7HYeXJGXawIGm7AkIBFLhS31YOFZBCqQGn5&_nc_ohc=EXQNXshJ5OsQ7kNvwGqadkx&_nc_oc=AdpcfZvAcj-YzdMJInJ1O2DeOaWF_5KSIExUeb1Lolaw1u868UfOr85WkqH0R2I07Bg&_nc_zt=23&_nc_ht=scontent.fhan5-9.fna&_nc_gid=IsfTo60sxR6BcxDW5zbmzg&_nc_ss=7b2a8&oh=00_Af6PSdqMmj-ekCTMDuex-7A5Qn7xcSxPZ2Hs8pCltfAwPw&oe=6A0FB6CB" class="rounded-circle me-3" alt="Avatar">
                                         <div class="flex-grow-1">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <h6 class="mb-0 fw-bold">John Doe</h6>
@@ -90,7 +114,7 @@
 
                                             <div class="comment reply ms-5 mt-3">
                                                 <div class="d-flex">
-                                                    <img src="https://via.placeholder.com/40" class="rounded-circle me-3" alt="Avatar">
+                                                    <img src="https://scontent.fhan5-2.fna.fbcdn.net/v/t39.30808-6/597383296_1159860822947398_4676087830865768196_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGYg-9NrbOEA6t5hted0S6-cxK0Fp38ZWVzErQWnfxlZRVnCe5Zqs39x7BO6wYsJGaRfHWFXHTJ46Fnycm105Wu&_nc_ohc=O2wH28S6mnEQ7kNvwEADwvM&_nc_oc=AdrRxvf7H43jFympeZs_Flaaa-iBRjR0eD3rK0JllmoP8bu7vFp2LHJWYXmEIcY8-6w&_nc_zt=23&_nc_ht=scontent.fhan5-2.fna&_nc_gid=zSA_hg3S9zq9rUkhGNCg7A&_nc_ss=7b2a8&oh=00_Af4SAc2kvlvwHjEOA02LI2vyu-aNb7xJRSTFxwBwIorGsg&oe=6A0FBC7C" class="rounded-circle me-3" alt="Avatar">
                                                     <div class="flex-grow-1">
                                                         <div class="d-flex justify-content-between align-items-center">
                                                             <h6 class="mb-0 fw-bold text-primary">Hùng Đỗ (Author)</h6>
@@ -106,7 +130,7 @@
 
                                 <div class="comment mb-4">
                                     <div class="d-flex">
-                                        <img src="https://via.placeholder.com/50" class="rounded-circle me-3" alt="Avatar">
+                                        <img src="https://scontent.fhan5-11.fna.fbcdn.net/v/t39.30808-6/490293865_976175301315952_1362138981479316453_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGgUo5z3WnrZ1WucMsViqX0v3P2JyclA8W_c_YnJyUDxSwpQY10PAkzRk1bpadSMFSrFC-TVDiIxBdFHYPrGSq4&_nc_ohc=QgZQauhgTJMQ7kNvwH7opQo&_nc_oc=AdrLFNejq447Q0N7u759B03Avs8IpHrtBucsYmu5RtGHXtdGcAUlN7Wu45f3zzb904U&_nc_zt=23&_nc_ht=scontent.fhan5-11.fna&_nc_gid=KENEonCsjjqQnEY2TqZzhw&_nc_ss=7b2a8&oh=00_Af6Ux-mWqwWlewv-5z0RDGg7oOWoVuMgPGOLwEG7lZvntA&oe=6A0FC5D4" class="rounded-circle me-3" alt="Avatar">
                                         <div class="flex-grow-1">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <h6 class="mb-0 fw-bold">Sarah Jenkins</h6>
@@ -122,7 +146,7 @@
 
                                 <div class="comment mb-4">
                                     <div class="d-flex">
-                                        <img src="https://via.placeholder.com/50" class="rounded-circle me-3" alt="Avatar">
+                                        <img src="https://scontent.fhan5-8.fna.fbcdn.net/v/t39.30808-6/482357165_951776580422491_4339725517316185362_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeHWmkfj2WZAmbVPGIBg2eU7fCCBwMLt0J18IIHAwu3QnT0VcRVFITE49p9FFhdsqne4MrHVYAs51vjp3IkxMoJP&_nc_ohc=JpYX7afGz70Q7kNvwEFykQj&_nc_oc=AdqvPH-8C87etpJnIJcimBBfrAyveXDdcGyhRyDE9I5tBKuZfbnNnH5ZJmyDtJZzwc4&_nc_zt=23&_nc_ht=scontent.fhan5-8.fna&_nc_gid=roB4pTPhGSLrtI8tZ4ed7A&_nc_ss=7b2a8&oh=00_Af75dqmZGCD6A4ItUrgNZt4eaGvz-FQtXdmvfxNxpR6KfA&oe=6A0FBE67" class="rounded-circle me-3" alt="Avatar">
                                         <div class="flex-grow-1">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <h6 class="mb-0 fw-bold">Mike Ross</h6>
