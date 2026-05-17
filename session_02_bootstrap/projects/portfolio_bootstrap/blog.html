@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Đỗ Mạnh Hùng</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom-theme.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">Hùng Đỗ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold text-primary" href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="blog" class="py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                
+                <div class="col-lg-8">
+                    <article class="card mb-4 overflow-hidden">
+                        <img src="https://via.placeholder.com/800x400?text=AI+Search+Algorithms" class="card-img-top" alt="AI">
+                        <div class="card-body p-4">
+                            <span class="badge bg-primary">Artificial Intelligence</span>
+                            <h3 class="card-title mt-2 fw-bold">Understanding AI Search Algorithms</h3>
+                            <p class="card-text text-muted"><small>By Đỗ Mạnh Hùng • May 17, 2026 • 5 min read</small></p>
+                            <p class="card-text">A deep dive into A*, Hill Climbing, Beam Search, Branch and Bound, and Alpha-Beta Pruning.</p>
+                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                            <hr class="my-5">
+                            <div class="comments-section mt-4">
+                                
+                                <div class="card mb-5 border-0 bg-light">
+                                    <div class="card-body p-4">
+                                        <h5 class="mb-4 fw-bold">Leave a Comment</h5>
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="name" class="form-label fw-semibold">Name</label>
+                                                    <input type="text" class="form-control" id="name" required>
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label for="email" class="form-label fw-semibold">Email</label>
+                                                    <input type="email" class="form-control" id="email" required>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="comment" class="form-label fw-semibold">Comment</label>
+                                                <textarea class="form-control" id="comment" rows="4" required></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary fw-bold">Post Comment</button>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <h5 class="mb-4 fw-bold">3 Comments</h5>
+
+                                <div class="comment mb-4">
+                                    <div class="d-flex">
+                                        <img src="https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-6/484050951_954842663449216_2872401633711429694_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeFZ-WaVMq2d4CnmFR3N5eOjLM_a2DSH_3gsz9rYNIf_ePGe6o8Sq7HYeXJGXawIGm7AkIBFLhS31YOFZBCqQGn5&_nc_ohc=EXQNXshJ5OsQ7kNvwGqadkx&_nc_oc=AdpcfZvAcj-YzdMJInJ1O2DeOaWF_5KSIExUeb1Lolaw1u868UfOr85WkqH0R2I07Bg&_nc_zt=23&_nc_ht=scontent.fhan5-9.fna&_nc_gid=IsfTo60sxR6BcxDW5zbmzg&_nc_ss=7b2a8&oh=00_Af6PSdqMmj-ekCTMDuex-7A5Qn7xcSxPZ2Hs8pCltfAwPw&oe=6A0FB6CB" class="rounded-circle me-3" alt="Avatar">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h6 class="mb-0 fw-bold">John Doe</h6>
+                                                <small class="text-muted">2 hours ago</small>
+                                            </div>
+                                            <p class="mb-2 mt-1">Great article! Very helpful for beginners.</p>
+                                            <button class="btn btn-sm btn-link text-decoration-none p-0">
+                                                <i class="bi bi-reply"></i> Reply
+                                            </button>
+
+                                            <div class="comment reply ms-5 mt-3">
+                                                <div class="d-flex">
+                                                    <img src="https://scontent.fhan5-2.fna.fbcdn.net/v/t39.30808-6/597383296_1159860822947398_4676087830865768196_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGYg-9NrbOEA6t5hted0S6-cxK0Fp38ZWVzErQWnfxlZRVnCe5Zqs39x7BO6wYsJGaRfHWFXHTJ46Fnycm105Wu&_nc_ohc=O2wH28S6mnEQ7kNvwEADwvM&_nc_oc=AdrRxvf7H43jFympeZs_Flaaa-iBRjR0eD3rK0JllmoP8bu7vFp2LHJWYXmEIcY8-6w&_nc_zt=23&_nc_ht=scontent.fhan5-2.fna&_nc_gid=zSA_hg3S9zq9rUkhGNCg7A&_nc_ss=7b2a8&oh=00_Af4SAc2kvlvwHjEOA02LI2vyu-aNb7xJRSTFxwBwIorGsg&oe=6A0FBC7C" class="rounded-circle me-3" alt="Avatar">
+                                                    <div class="flex-grow-1">
+                                                        <div class="d-flex justify-content-between align-items-center">
+                                                            <h6 class="mb-0 fw-bold text-primary">Hùng Đỗ (Author)</h6>
+                                                            <small class="text-muted">1 hour ago</small>
+                                                        </div>
+                                                        <p class="mb-2 mt-1">Thank you! Glad it helped.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="comment mb-4">
+                                    <div class="d-flex">
+                                        <img src="https://scontent.fhan5-11.fna.fbcdn.net/v/t39.30808-6/490293865_976175301315952_1362138981479316453_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGgUo5z3WnrZ1WucMsViqX0v3P2JyclA8W_c_YnJyUDxSwpQY10PAkzRk1bpadSMFSrFC-TVDiIxBdFHYPrGSq4&_nc_ohc=QgZQauhgTJMQ7kNvwH7opQo&_nc_oc=AdrLFNejq447Q0N7u759B03Avs8IpHrtBucsYmu5RtGHXtdGcAUlN7Wu45f3zzb904U&_nc_zt=23&_nc_ht=scontent.fhan5-11.fna&_nc_gid=KENEonCsjjqQnEY2TqZzhw&_nc_ss=7b2a8&oh=00_Af6Ux-mWqwWlewv-5z0RDGg7oOWoVuMgPGOLwEG7lZvntA&oe=6A0FC5D4" class="rounded-circle me-3" alt="Avatar">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h6 class="mb-0 fw-bold">Sarah Jenkins</h6>
+                                                <small class="text-muted">5 hours ago</small>
+                                            </div>
+                                            <p class="mb-2 mt-1">I finally understand Alpha-Beta Pruning. Thanks!</p>
+                                            <button class="btn btn-sm btn-link text-decoration-none p-0">
+                                                <i class="bi bi-reply"></i> Reply
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="comment mb-4">
+                                    <div class="d-flex">
+                                        <img src="https://scontent.fhan5-8.fna.fbcdn.net/v/t39.30808-6/482357165_951776580422491_4339725517316185362_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeHWmkfj2WZAmbVPGIBg2eU7fCCBwMLt0J18IIHAwu3QnT0VcRVFITE49p9FFhdsqne4MrHVYAs51vjp3IkxMoJP&_nc_ohc=JpYX7afGz70Q7kNvwEFykQj&_nc_oc=AdqvPH-8C87etpJnIJcimBBfrAyveXDdcGyhRyDE9I5tBKuZfbnNnH5ZJmyDtJZzwc4&_nc_zt=23&_nc_ht=scontent.fhan5-8.fna&_nc_gid=roB4pTPhGSLrtI8tZ4ed7A&_nc_ss=7b2a8&oh=00_Af75dqmZGCD6A4ItUrgNZt4eaGvz-FQtXdmvfxNxpR6KfA&oe=6A0FBE67" class="rounded-circle me-3" alt="Avatar">
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <h6 class="mb-0 fw-bold">Mike Ross</h6>
+                                                <small class="text-muted">1 day ago</small>
+                                            </div>
+                                            <p class="mb-2 mt-1">Will you cover neural networks next?</p>
+                                            <button class="btn btn-sm btn-link text-decoration-none p-0">
+                                                <i class="bi bi-reply"></i> Reply
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </article>
+
+                    <article class="card mb-4 overflow-hidden">
+                        <img src="https://via.placeholder.com/800x400?text=Kali+Linux" class="card-img-top" alt="Linux">
+                        <div class="card-body p-4">
+                            <span class="badge bg-success">Systems</span>
+                            <h3 class="card-title mt-2 fw-bold">Kali Linux Minimal Setup Guide</h3>
+                            <p class="card-text text-muted"><small>By Đỗ Mạnh Hùng • Mar 22, 2026 • 7 min read</small></p>
+                            <p class="card-text">Troubleshooting Wi-Fi driver installation and display issues on Lenovo ThinkPad T440s.</p>
+                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="card mb-4 overflow-hidden">
+                        <img src="https://via.placeholder.com/800x400?text=C%2B%2B+Pointers" class="card-img-top" alt="C++">
+                        <div class="card-body p-4">
+                            <span class="badge bg-warning text-dark">Programming</span>
+                            <h3 class="card-title mt-2 fw-bold">Mastering Pointers in C++</h3>
+                            <p class="card-text text-muted"><small>By Đỗ Mạnh Hùng • Jan 10, 2026 • 6 min read</small></p>
+                            <p class="card-text">Using pointer-based structures for object management to align with university coding conventions.</p>
+                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="sticky-top-sidebar">
+                        
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold mb-3">Search</h5>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <button class="btn btn-primary" type="button">Go</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header bg-white">
+                                <h5 class="mb-0 fw-bold">Categories</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Technology
+                                    <span class="badge bg-primary rounded-pill">12</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Algorithms
+                                    <span class="badge bg-primary rounded-pill">5</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card mb-4">
+                            <div class="card-header bg-white">
+                                <h5 class="mb-0 fw-bold">Recent Posts</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="https://via.placeholder.com/60" class="rounded object-fit-cover" width="60" height="60" alt="Thumb">
+                                    <div class="ms-3">
+                                        <h6 class="mb-1 fw-bold">Cache Simulation</h6>
+                                        <small class="text-muted">Dec 20, 2025</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4">
+                            <div class="card-header bg-white">
+                                <h5 class="mb-0 fw-bold">Tags</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-secondary p-2">HTML</span>
+                                    <span class="badge bg-secondary p-2">CSS</span>
+                                    <span class="badge bg-secondary p-2">C++</span>
+                                    <span class="badge bg-secondary p-2">Python</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
