@@ -37,3 +37,24 @@
 .form-control, .form-select {
     border-radius: 10px;
 }
+
+:root {
+    --custom-slate-50: #f8fafc;
+    --custom-slate-200: #e2e8f0;
+    --custom-slate-500: #64748b;
+    --custom-slate-700: #334155;
+    --custom-slate-900: #0f172a;
+}
+
+body {
+    background-color: var(--custom-slate-50);
+    color: var(--custom-slate-700);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--custom-slate-900);
+}
+
+.text-muted {
+    color: var(--custom-slate-500) !important;
+}
