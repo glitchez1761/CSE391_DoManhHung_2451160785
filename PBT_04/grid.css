@@ -1,0 +1,91 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: #e2e8f0; padding: 20px; }
+
+/* KHAI BÁO LƯỚI TỔNG THỂ KÈM ĐIỂM BONUS AREA */
+.grid-container {
+    max-width: 1200px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    gap: 20px;
+    /* Áp dụng kỹ thuật Named Areas (Bonus Point) */
+    grid-template-areas: 
+        "header  header  header"
+        "hero    hero    hero"
+        "sidebar main    ads"
+        "footer  footer  footer";
+}
+
+/* Định tuyến các element vào Area */
+.header { grid-area: header; background: #1e293b; color: white; padding: 20px; text-align: center; font-weight: bold; border-radius: 8px;}
+.sidebar { grid-area: sidebar; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.main-content { grid-area: main; min-width: 0; } /* min-width: 0 quan trọng để ngăn chặn Grid Blowout */
+/* SỬA: Thêm background + min-height để ads luôn hiển thị kể cả khi ảnh lỗi */
+.ads {
+    grid-area: ads;
+    background: #f1f5f9;
+    border-radius: 8px;
+    min-height: 200px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+}
+.footer { grid-area: footer; background: #1e293b; color: white; padding: 30px; text-align: center; border-radius: 8px;}
+
+/* LƯỚI CHO HERO BANNER KÈM BONUS */
+.hero {
+    grid-area: hero; background: linear-gradient(135deg, #3b82f6, #8b5cf6); padding: 30px; border-radius: 8px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: center; color: white;
+}
+.hero-text { font-size: 24px; font-weight: 800; text-align: center; }
+.hero-featured-card {
+    background: rgba(255,255,255,0.2); padding: 40px; border-radius: 8px;
+    grid-column: span 2; /* Điểm Bonus: Chiếm 2 ô */
+    text-align: center; font-weight: bold; backdrop-filter: blur(10px);
+}
+
+/* LƯỚI CHO SẢN PHẨM TRONG MAIN */
+.main-content {
+    display: grid;
+    /* Dùng minmax để tự co giãn responsive thay vì ép cứng cột */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+.product-item {
+    background: white; height: 180px; border-radius: 8px;
+    display: flex; justify-content: center; align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); font-weight: bold; color: #64748b;
+    transition: transform 0.3s;
+}
+.product-item:hover { transform: translateY(-5px); }
+
+/* --- RESPONSIVE MEDIA QUERIES (TUẦN 3) --- */
+/* SỬA: Tăng breakpoint từ 992px → 1100px để ads không bị ẩn sớm */
+@media (max-width: 1100px) {
+    .grid-container {
+        grid-template-columns: 200px 1fr; /* Ẩn cột Ads */
+        grid-template-areas: 
+            "header  header"
+            "hero    hero"
+            "sidebar main"
+            "footer  footer";
+    }
+    .ads { display: none; }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Thành 1 cột xếp chồng */
+        grid-template-areas: 
+            "header"
+            "hero"
+            "sidebar"
+            "main"
+            "footer";
+    }
+    .hero { grid-template-columns: 1fr; }
+    .hero-featured-card { grid-column: span 1; }
+}
