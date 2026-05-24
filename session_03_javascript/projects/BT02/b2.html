@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Công việc</title>
+    <link rel="stylesheet" href="css/b2.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Quản lý Công việc Cá nhân</h1>
+
+        <div id="notification" class="notification hidden"></div>
+
+        <div class="header-actions">
+            <div class="statistics">
+                <p>Tổng công việc: <strong id="totalTasks">0</strong></p>
+                <p>Đã hoàn thành: <strong id="completedTasks" class="text-success">0</strong></p>
+                <p>Chưa hoàn thành: <strong id="pendingTasks" class="text-danger">0</strong></p>
+            </div>
+            <button id="btnOpenAddForm" class="btn btn-primary">Thêm công việc</button>
+        </div>
+
+        <div id="taskList" class="task-list">
+        </div>
+    </div>
+
+    <div id="taskModal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="modalTitle">Thêm Công việc</h2>
+            <form id="taskForm">
+                <input type="hidden" id="editIndex" value="-1">
+
+                <div class="form-group">
+                    <label for="taskTitle">Tiêu đề công việc *</label>
+                    <input type="text" id="taskTitle" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="taskDesc">Mô tả ngắn</label>
+                    <textarea id="taskDesc" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="dueDate">Hạn hoàn thành *</label>
+                    <input type="date" id="dueDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="priority">Mức ưu tiên *</label>
+                    <select id="priority" required>
+                        <option value="Cao">Cao</option>
+                        <option value="Trung bình">Trung bình</option>
+                        <option value="Thấp">Thấp</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="btnSubmit" class="btn btn-success">Lưu dữ liệu</button>
+                    <button type="button" id="btnCloseForm" class="btn btn-danger">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../../js/b2.js"></script>
+</body>
+
+</html>

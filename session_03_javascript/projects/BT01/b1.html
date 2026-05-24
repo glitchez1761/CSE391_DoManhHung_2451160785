@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Sinh viên</title>
+    <link rel="stylesheet" href="css/b1.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hệ thống Quản lý Sinh viên</h1>
+
+        <div id="notification" class="notification hidden"></div>
+
+        <div class="header-actions">
+            <div class="statistics">
+                <p>Tổng số sinh viên: <strong id="totalStudents">0</strong></p>
+                <p>Điểm trung bình lớp: <strong id="avgScore">0.0</strong></p>
+            </div>
+            <button id="btnOpenAddForm" class="btn btn-primary">Thêm sinh viên</button>
+        </div>
+
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>Mã SV</th>
+                    <th>Họ và tên</th>
+                    <th>Ngày sinh</th>
+                    <th>Lớp học</th>
+                    <th>Điểm TB</th>
+                    <th>Email</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody id="studentTableBody">
+                <tr>
+                    <td>2451160001</td>
+                    <td>Nguyễn Văn An</td>
+                    <td>2005-01-15</td>
+                    <td>66HTTT2</td>
+                    <td>8.5</td>
+                    <td>an.nguyen@gmail.com</td>
+                    <td>
+                        <button class="btn btn-warning btn-edit" data-index="0">Sửa</button>
+                        <button class="btn btn-danger btn-delete" data-index="0">Xóa</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2451160002</td>
+                    <td>Trần Thị Bình</td>
+                    <td>2005-05-22</td>
+                    <td>66HTTT2</td>
+                    <td>7.2</td>
+                    <td>binh.tran@gmail.com</td>
+                    <td>
+                        <button class="btn btn-warning btn-edit" data-index="1">Sửa</button>
+                        <button class="btn btn-danger btn-delete" data-index="1">Xóa</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2451160003</td>
+                    <td>Lê Hoàng Chiến</td>
+                    <td>2005-11-10</td>
+                    <td>66HTTT2</td>
+                    <td>9.0</td>
+                    <td>chien.le@gmail.com</td>
+                    <td>
+                        <button class="btn btn-warning btn-edit" data-index="2">Sửa</button>
+                        <button class="btn btn-danger btn-delete" data-index="2">Xóa</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2451160004</td>
+                    <td>Phạm Minh Đức</td>
+                    <td>2005-08-12</td>
+                    <td>66HTTT2</td>
+                    <td>6.8</td>
+                    <td>duc.pham@gmail.com</td>
+                    <td>
+                        <button class="btn btn-warning btn-edit" data-index="3">Sửa</button>
+                        <button class="btn btn-danger btn-delete" data-index="3">Xóa</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2451160005</td>
+                    <td>Vũ Thị Dung</td>
+                    <td>2005-03-30</td>
+                    <td>66HTTT2</td>
+                    <td>7.9</td>
+                    <td>dung.vu@gmail.com</td>
+                    <td>
+                        <button class="btn btn-warning btn-edit" data-index="4">Sửa</button>
+                        <button class="btn btn-danger btn-delete" data-index="4">Xóa</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="studentModal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="modalTitle">Thêm Sinh viên</h2>
+            <form id="studentForm">
+                <input type="hidden" id="editIndex" value="-1">
+
+                <div class="form-group">
+                    <label for="studentId">Mã sinh viên *</label>
+                    <input type="text" id="studentId" placeholder="VD: 2451160785" required>
+                    <span class="error-msg" id="errId"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="fullName">Họ và tên *</label>
+                    <input type="text" id="fullName" required>
+                    <span class="error-msg" id="errName"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Ngày sinh *</label>
+                    <input type="date" id="dob" required>
+                    <span class="error-msg" id="errDob"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="className">Lớp học *</label>
+                    <input type="text" id="className" value="66HTTT2" required>
+                    <span class="error-msg" id="errClass"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="avgMark">Điểm trung bình *</label>
+                    <input type="number" id="avgMark" step="0.1" min="0" max="10" required>
+                    <span class="error-msg" id="errMark"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" required>
+                    <span class="error-msg" id="errEmail"></span>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="btnSubmit" class="btn btn-success">Lưu dữ liệu</button>
+                    <button type="button" id="btnCloseForm" class="btn btn-danger">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../../js/b1.js"></script>
+</body>
+
+</html>
