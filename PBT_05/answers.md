@@ -54,3 +54,10 @@ Theo tài liệu tham chiếu: tuan_3_css_advanced/13_creating_responsive_layout
 3. Mixins: Gom các nhóm thuộc tính CSS để dùng lại (@mixin flex-center {...}).
 4. Extend: Cho phép selector này thừa kế thuộc tính từ selector khác.
 - Tại sao trình duyệt không đọc được SCSS: Trình duyệt chỉ hiểu CSS. Cần dùng trình biên dịch (Sass compiler) để chuyển file `.scss` sang `.css`.
+## Bài B3 (SCSS Refactor)
+**Lệnh biên dịch SCSS sang CSS:**
+
+Sử dụng công cụ Sass qua giao diện dòng lệnh (Terminal). Mở terminal tại thư mục chứa dự án và chạy:
+
+```bash
+sass scss/style.scss style.css

@@ -1,0 +1,121 @@
+.header {
+    background: $primary-color;
+    color: $white;
+    padding: $spacing-md;
+    @include flex-between;
+
+    .hamburger {
+        font-size: 24px;
+        cursor: pointer;
+        display: block;
+
+        @include respond-to($breakpoint-desktop) {
+            display: none;
+        }
+    }
+
+    .nav-menu {
+        display: none;
+
+        // Hiện ra trên Desktop
+        @include respond-to($breakpoint-desktop) {
+            display: flex;
+            gap: $spacing-lg;
+
+            a {
+                color: $white;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.layout-wrapper {
+    padding: $spacing-md;
+
+    @include respond-to($breakpoint-desktop) {
+        display: grid;
+        grid-template-columns: 200px 1fr 200px;
+        gap: $spacing-lg;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+.sidebar,
+.ads-bar {
+    display: none;
+    background: $white;
+    padding: $spacing-md;
+    border-radius: $spacing-sm;
+
+    @include respond-to($breakpoint-tablet) {
+        display: block;
+        margin-bottom: $spacing-lg;
+    }
+
+    @include respond-to($breakpoint-desktop) {
+        margin-bottom: 0;
+    }
+}
+
+.filter-options {
+    @include respond-to($breakpoint-tablet) {
+        display: flex;
+        gap: $spacing-md;
+        margin-top: 10px;
+    }
+
+    @include respond-to($breakpoint-desktop) {
+        flex-direction: column;
+    }
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+
+    @include respond-to($breakpoint-tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-to($breakpoint-desktop) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.card {
+    background: $white;
+    padding: $spacing-md;
+    border-radius: $spacing-sm;
+    text-align: center;
+    @include card-shadow;
+
+    img {
+        max-width: 100%;
+        border-radius: $spacing-sm;
+    }
+
+    h3 {
+        margin-top: $spacing-sm;
+        color: $primary-color;
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    &.featured {
+        border: 2px solid $secondary-color;
+    }
+}
+
+.footer {
+    background: $secondary-color;
+    color: $white;
+    text-align: center;
+    padding: $spacing-lg;
+    margin-top: $spacing-lg;
+}
