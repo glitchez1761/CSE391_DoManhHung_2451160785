@@ -167,3 +167,53 @@ sass scss/style.scss style.css
 ```
 - Layout bao nhiêu cột? -> 12 cột CSS Grid. Content chiếm 8 cột (col-span: 8), Sidebar chiếm 4 cột (col-span: 4).
 - Sidebar có không? -> Có. Sidebar hiển thị thông tin bổ sung: giờ mở cửa, địa chỉ, đánh giá, khuyến mãi. Ở mobile/tablet sidebar bị ẩn hoặc gộp vào footer.
+- CSS skeleton:
+```
+.layout-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.booking-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    /* Lưới món ăn: 2 cột */
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .booking-section {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .main-content-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .booking-section {
+        /* Bỏ grid 2 cột của tablet, chuyển về dạng cột dọc cho sidebar */
+        grid-template-columns: 1fr; 
+        position: sticky;
+        top: 20px;
+    }
+}
+```
