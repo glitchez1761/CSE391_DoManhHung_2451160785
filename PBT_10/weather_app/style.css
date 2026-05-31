@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eef2ff;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.search-box button {
+    padding: 12px 20px;
+    border: none;
+    background: #4f46e5;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #3730a3;
+}
+
+.history {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.history button {
+    padding: 6px 12px;
+    border: none;
+    background: #ddd;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.weather-card {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.weather-card img {
+    width: 80px;
+}
+
+.weather-card h2 {
+    margin: 10px 0;
+}
+
+.weather-card p {
+    margin: 6px 0;
+}
+
+.loading {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #ddd;
+    border-top-color: #4f46e5;
+    border-radius: 50%;
+    margin: auto;
+    animation: spin .8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.error {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 10px;
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.hidden {
+    display: none;
+}
