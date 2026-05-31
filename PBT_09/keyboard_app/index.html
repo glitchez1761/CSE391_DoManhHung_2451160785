@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Navigation App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Dark mode toggle -->
+    <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <span class="toggle-icon">🌙</span>
+        <span>Dark</span>
+    </button>
+
+    <!-- Keyboard shortcuts hint bar -->
+    <div class="shortcut-bar" aria-label="Keyboard shortcuts">
+        <span><kbd>←</kbd><kbd>→</kbd> Navigate</span>
+        <span><kbd>1</kbd>–<kbd>9</kbd> Jump</span>
+        <span><kbd>Space</kbd> Slideshow</span>
+        <span><kbd>Esc</kbd> Close modal</span>
+        <span><kbd>Ctrl+K</kbd> Command palette</span>
+    </div>
+
+    <!-- Gallery section -->
+    <main class="gallery-section" id="gallerySection">
+        <header class="section-header">
+            <h1>Gallery</h1>
+            <div class="gallery-status" id="galleryStatus" aria-live="polite">1 / 9</div>
+        </header>
+
+        <div class="gallery-stage" id="galleryStage">
+            <button class="nav-arrow left" id="prevBtn" aria-label="Ảnh trước (←)">‹</button>
+            <div class="gallery-frame" id="galleryFrame" tabindex="0"
+                aria-label="Gallery ảnh, dùng phím mũi tên để chuyển">
+                <img class="gallery-img" id="galleryImg" src="" alt="" draggable="false">
+                <div class="gallery-info" id="galleryInfo"></div>
+            </div>
+            <button class="nav-arrow right" id="nextBtn" aria-label="Ảnh tiếp (→)">›</button>
+        </div>
+
+        <div class="thumbnail-strip" id="thumbStrip" role="tablist" aria-label="Thumbnails"></div>
+
+        <div class="slideshow-controls">
+            <button class="play-btn" id="playBtn" aria-label="Play/Pause slideshow" aria-pressed="false">
+                <span id="playIcon">▶</span> Slideshow
+            </button>
+            <span class="slide-speed-label">3s / ảnh</span>
+        </div>
+    </main>
+
+    <!-- Image modal -->
+    <div class="img-modal" id="imgModal" hidden role="dialog" aria-modal="true" aria-label="Xem ảnh lớn">
+        <div class="img-modal-content">
+            <button class="img-modal-close" id="imgModalClose" aria-label="Đóng (Esc)">×</button>
+            <img id="imgModalImg" src="" alt="">
+            <p id="imgModalCaption" class="img-modal-caption"></p>
+        </div>
+    </div>
+
+    <!-- Command palette -->
+    <div class="cmd-overlay" id="cmdOverlay" hidden role="dialog" aria-modal="true" aria-label="Command palette">
+        <div class="cmd-palette" id="cmdPalette">
+            <div class="cmd-header">
+                <span class="cmd-prompt">⌘</span>
+                <input type="text" class="cmd-input" id="cmdInput" placeholder="Tìm lệnh..." autocomplete="off"
+                    aria-label="Nhập tìm kiếm lệnh" aria-autocomplete="list" aria-controls="cmdList"
+                    aria-haspopup="listbox">
+                <kbd class="cmd-esc">Esc</kbd>
+            </div>
+            <ul class="cmd-list" id="cmdList" role="listbox" aria-label="Danh sách lệnh"></ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
