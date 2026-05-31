@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1 class="title">todos</h1>
+    </header>
+    <main class="main">
+      <div class="input-wrapper">
+        <input type="text" id="todoInput" class="todo-input"
+               placeholder="Thêm việc cần làm..." autocomplete="off"
+               aria-label="Nhập todo mới">
+        <button id="addBtn" class="add-btn" aria-label="Thêm todo">+</button>
+      </div>
+      <section class="todo-section" id="todoSection">
+        <ul class="todo-list" id="todoList" aria-label="Danh sách todo"></ul>
+        <footer class="todo-footer" id="todoFooter">
+          <span class="items-left" id="itemsLeft" aria-live="polite">0 items left</span>
+          <nav class="filters" aria-label="Filter todos">
+            <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-btn" data-filter="active" aria-pressed="false">Active</button>
+            <button class="filter-btn" data-filter="completed" aria-pressed="false">Completed</button>
+          </nav>
+          <button class="clear-btn" id="clearCompleted">Clear completed</button>
+        </footer>
+      </section>
+      <p class="hint">Double-click để sửa · Click để toggle</p>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
