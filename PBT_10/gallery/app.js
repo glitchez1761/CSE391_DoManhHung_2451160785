@@ -1,20 +1,23 @@
 const gallery =
-document.getElementById("gallery");
+    document.getElementById("gallery");
 
 const loading =
-document.getElementById("loading");
+    document.getElementById("loading");
 
 const trigger =
-document.getElementById("load-trigger");
+    document.getElementById("load-trigger");
 
 const modal =
-document.getElementById("modal");
+    document.getElementById("modal");
 
 const modalImg =
-document.getElementById("modalImg");
+    document.getElementById("modalImg");
 
 const closeBtn =
-document.getElementById("closeBtn");
+    document.getElementById("closeBtn");
+
+const errorBox =
+    document.getElementById("error");
 
 let page = 1;
 
@@ -22,12 +25,12 @@ let isLoading = false;
 
 let hasMore = true;
 
-async function loadPhotos(){
+async function loadPhotos() {
 
-    if(isLoading || !hasMore)
+    if (isLoading || !hasMore)
         return;
 
-    try{
+    try {
 
         isLoading = true;
 
@@ -35,18 +38,20 @@ async function loadPhotos(){
             "hidden"
         );
 
-        const response =
-        await fetch(
-            `https://picsum.photos/v2/list?page=${page}&limit=20`
-        );
+        errorBox.classList.add("hidden");
 
-        if(!response.ok)
+        const response =
+            await fetch(
+                `https://picsum.photos/v2/list?page=${page}&limit=20`
+            );
+
+        if (!response.ok)
             throw new Error();
 
         const photos =
-        await response.json();
+            await response.json();
 
-        if(photos.length === 0){
+        if (photos.length === 0) {
 
             hasMore = false;
 
@@ -58,12 +63,19 @@ async function loadPhotos(){
         page++;
 
     }
-    catch(error){
+    catch (error) {
 
         console.error(error);
 
+        errorBox.textContent =
+            "❌ Không tải được ảnh";
+
+        errorBox.classList.remove(
+            "hidden"
+        );
+
     }
-    finally{
+    finally {
 
         loading.classList.add(
             "hidden"
@@ -75,18 +87,18 @@ async function loadPhotos(){
 
 }
 
-function renderPhotos(photos){
+function renderPhotos(photos) {
 
     photos.forEach(photo => {
 
         const div =
-        document.createElement("div");
+            document.createElement("div");
 
         div.className =
-        "photo";
+            "photo";
 
         div.innerHTML =
-        `
+            `
         <img
             data-src="${photo.download_url}"
             alt="${photo.author}"
@@ -94,7 +106,7 @@ function renderPhotos(photos){
         `;
 
         const img =
-        div.querySelector("img");
+            div.querySelector("img");
 
         lazyObserver.observe(img);
 
@@ -112,49 +124,49 @@ function renderPhotos(photos){
 }
 
 const lazyObserver =
-new IntersectionObserver(entries => {
+    new IntersectionObserver(entries => {
 
-    entries.forEach(entry => {
+        entries.forEach(entry => {
 
-        if(entry.isIntersecting){
+            if (entry.isIntersecting) {
 
-            const img =
-            entry.target;
+                const img =
+                    entry.target;
 
-            img.src =
-            img.dataset.src;
+                img.src =
+                    img.dataset.src;
 
-            lazyObserver.unobserve(
-                img
-            );
+                lazyObserver.unobserve(
+                    img
+                );
+
+            }
+
+        });
+
+    },
+        {
+            threshold: 0.1
+        });
+
+const infiniteObserver =
+    new IntersectionObserver(entries => {
+
+        if (
+            entries[0].isIntersecting
+        ) {
+
+            loadPhotos();
 
         }
 
     });
 
-},
-{
-    threshold:0.1
-});
-
-const infiniteObserver =
-new IntersectionObserver(entries => {
-
-    if(
-        entries[0].isIntersecting
-    ){
-
-        loadPhotos();
-
-    }
-
-});
-
 infiniteObserver.observe(
     trigger
 );
 
-function openModal(src){
+function openModal(src) {
 
     modalImg.src = src;
 
@@ -164,7 +176,7 @@ function openModal(src){
 
 }
 
-function closeModal(){
+function closeModal() {
 
     modal.classList.add(
         "hidden"
@@ -181,7 +193,7 @@ modal.addEventListener(
     "click",
     e => {
 
-        if(e.target === modal){
+        if (e.target === modal) {
 
             closeModal();
 
@@ -189,5 +201,7 @@ modal.addEventListener(
 
     }
 );
+
+errorBox.textContent = "Không tải được ảnh";
 
 loadPhotos();
