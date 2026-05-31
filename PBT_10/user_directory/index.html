@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>User Directory</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>User Directory CRUD</h1>
+
+        <div class="toolbar">
+
+            <input type="text" id="searchInput" placeholder="Tìm theo tên hoặc email...">
+
+            <button id="addBtn">
+                Thêm User
+            </button>
+
+        </div>
+
+        <div id="loading" class="loading hidden">
+            Đang tải dữ liệu...
+        </div>
+
+        <div id="usersContainer" class="users-grid">
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+
+    <div id="modal" class="modal hidden">
+
+        <div class="modal-content">
+
+            <h2 id="formTitle">
+                Thêm User
+            </h2>
+
+            <form id="userForm">
+
+                <input type="text" id="name" placeholder="Tên" required>
+
+                <input type="email" id="email" placeholder="Email" required>
+
+                <input type="text" id="phone" placeholder="Số điện thoại" required>
+
+                <div class="actions">
+
+                    <button type="submit">
+                        Lưu
+                    </button>
+
+                    <button type="button" id="cancelBtn">
+                        Hủy
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <div id="toast"></div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
