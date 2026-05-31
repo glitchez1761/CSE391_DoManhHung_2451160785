@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Multi API Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <h1>📊 Multi API Dashboard</h1>
+
+            <button id="refreshBtn">
+                Refresh All
+            </button>
+
+        </header>
+
+        <p id="loadTime">
+            Chưa tải dữ liệu
+        </p>
+
+        <div id="globalLoading" class="loading hidden">
+
+            Đang tải dữ liệu...
+        </div>
+
+        <div class="dashboard">
+
+            <div class="widget">
+
+                <h2>Users</h2>
+
+                <div id="usersWidget">
+                    Loading...
+                </div>
+
+            </div>
+
+            <div class="widget">
+
+                <h2>Random Users</h2>
+
+                <div id="randomWidget">
+                    Loading...
+                </div>
+
+            </div>
+
+            <div class="widget">
+
+                <h2>Dogs</h2>
+
+                <div id="dogsWidget">
+                    Loading...
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
